@@ -5,7 +5,7 @@ import SubmitButton from "../components/Form/SubmitButton";
 
 export default function Contact() {
   return (
-    <div className="flex flex-col items-center">
+    <div className="center-div">
       <h1 className="bold text-4xl text-center p-4"> Contact Us </h1>
       <SimpleForm buttonText={"Submit"} onSubmit={undefined}></SimpleForm>
       <SubmitButton

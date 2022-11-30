@@ -3,7 +3,7 @@ import SubmitButton from "../components/Form/SubmitButton";
 
 export default function () {
   return (
-    <div className="flex flex-col items-center">
+    <div className="center-div">
       <h1 className="bold text-4xl text-center">
         {" "}
         Welcome to my NextJS Webpage{" "}

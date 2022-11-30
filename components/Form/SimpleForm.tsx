@@ -3,7 +3,7 @@ import SubmitButton from "./SubmitButton";
 
 export default function SimpleForm({ buttonText, onSubmit }) {
   return (
-    <form className="flex flex-col items-center">
+    <form className="center-div">
       <label className="text-xl">Name</label>
       <input className="border-2 border-black rounded-md p-2 m-2" type="text" />
       <label className="text-xl">Email</label>
