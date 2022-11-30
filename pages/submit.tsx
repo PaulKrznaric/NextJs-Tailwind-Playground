@@ -7,9 +7,8 @@ export default function Submit() {
     <div className="center-div">
       <h1 className="bold text-4xl text-center p-4"> Form Submitted </h1>
       <SubmitButton
-        size="36"
         className="w-40"
-        onClick={() => {
+        click={() => {
           window.location.href = "/";
         }}
       >

@@ -4,15 +4,10 @@ import classNames from "classnames";
 //import styles from the index css
 //import styles from the nextjs app
 
-export default function SubmitButton({
-  size,
-  onClick,
-  children,
-  className = "",
-}) {
+export default function SubmitButton({ click, children, className = "" }) {
   const buttonClasses = classNames("btn", className);
   return (
-    <button onClick={onClick} className={buttonClasses}>
+    <button onClick={click} className={buttonClasses}>
       {children}
     </button>
   );

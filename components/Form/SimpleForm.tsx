@@ -13,9 +13,7 @@ export default function SimpleForm({ buttonText, onSubmit }) {
       />
       <label className="text-xl">Message</label>
       <textarea className="border-2 border-black rounded-md p-2 m-2" />
-      <SubmitButton size="36" onClick={onSubmit}>
-        {buttonText}
-      </SubmitButton>
+      <SubmitButton click={onSubmit}>{buttonText}</SubmitButton>
     </form>
   );
 }
