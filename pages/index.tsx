@@ -4,7 +4,7 @@ import SubmitButton from "../components/Form/SubmitButton";
 export default function () {
   return (
     <div className="center-div">
-      <h1 className="bold text-4xl text-center">
+      <h1 className="bold text-4xl text-center p-4">
         {" "}
         Welcome to my NextJS Webpage{" "}
       </h1>
