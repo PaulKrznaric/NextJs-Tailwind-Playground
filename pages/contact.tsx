@@ -4,7 +4,7 @@ import React from "react";
 import Router from "next/router";
 
 import SimpleForm from "../components/Form/SimpleForm";
-import SubmitButton from "../components/Form/SubmitButton";
+import SubmitButton from "../components/Form/Button";
 
 class Contact extends React.Component {
   submitRoute: string;

@@ -1,7 +1,7 @@
 // pages/submit.tsx
 
 import Router from "next/router";
-import SubmitButton from "../components/Form/SubmitButton";
+import SubmitButton from "../components/Form/Button";
 
 export default function Submit() {
   return (

@@ -1,7 +1,6 @@
 //components/Form/SimpleForm.tsx
-import SubmitButton from "./SubmitButton";
+import SubmitButton from "./Button";
 import React from "react";
-import Router from "next/router";
 
 interface FormProps {
   children?: React.ReactNode;
@@ -13,9 +12,7 @@ interface FormProps {
 }
 
 const SimpleForm: React.FC<FormProps> = ({ children, ...props }) => {
-  const submitForm = () => {
-    Router.push(props.submitRoute);
-  };
+  const submitForm = () => {};
 
   return (
     <form action="/submit" className="center-div" aria-label={props.formLabel}>
@@ -38,7 +35,7 @@ const SimpleForm: React.FC<FormProps> = ({ children, ...props }) => {
         className="border-2 border-black rounded-md p-2 m-2"
         name="Message"
       />
-      <SubmitButton onClick={null} label={props.buttonLabel}>
+      <SubmitButton onClick={null} label={props.buttonLabel} isSubmit>
         {props.buttonText}
       </SubmitButton>
     </form>

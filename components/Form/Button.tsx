@@ -9,6 +9,7 @@ import classNames from "classnames";
 interface ButtonProps {
   children?: React.ReactNode;
   label: string;
+  isSubmit?: boolean;
   onClick: () => void;
   disabled?: boolean;
   className?: string;
@@ -17,7 +18,11 @@ interface ButtonProps {
 const SubmitButton: React.FC<ButtonProps> = ({ children, ...props }) => {
   const buttonClasses = classNames("btn", props.className);
   return (
-    <button onClick={props.onClick} className={buttonClasses} type="submit">
+    <button
+      onClick={props.onClick}
+      className={buttonClasses}
+      type={props.isSubmit ? "submit" : "button"}
+    >
       {children}
     </button>
   );
