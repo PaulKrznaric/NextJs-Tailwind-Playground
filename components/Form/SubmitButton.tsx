@@ -17,7 +17,7 @@ interface ButtonProps {
 const SubmitButton: React.FC<ButtonProps> = ({ children, ...props }) => {
   const buttonClasses = classNames("btn", props.className);
   return (
-    <button onClick={props.onClick} className={buttonClasses}>
+    <button onClick={props.onClick} className={buttonClasses} type="submit">
       {children}
     </button>
   );

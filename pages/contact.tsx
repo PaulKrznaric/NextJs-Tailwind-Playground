@@ -7,15 +7,12 @@ import SimpleForm from "../components/Form/SimpleForm";
 import SubmitButton from "../components/Form/SubmitButton";
 
 class Contact extends React.Component {
+  submitRoute: string;
   constructor(props) {
     super(props);
 
-    this.submitForm = this.submitForm.bind(this);
+    this.submitRoute = "/submit";
     this.state = {};
-  }
-
-  submitForm() {
-    Router.push("/submit");
   }
 
   render() {
@@ -24,7 +21,7 @@ class Contact extends React.Component {
         <h1 className="bold text-4xl text-center p-4"> Contact Us </h1>
         <SimpleForm
           buttonText={"Submit"}
-          onSubmit={this.submitForm}
+          submitRoute={this.submitRoute}
           formLabel={"Contact Form"}
           buttonLabel={"Submit Contact Form"}
         ></SimpleForm>
