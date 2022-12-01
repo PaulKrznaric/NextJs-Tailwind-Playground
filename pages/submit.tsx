@@ -1,6 +1,6 @@
 // pages/submit.tsx
 
-import { PropTypes } from "mobx-react";
+import Router from "next/router";
 import SubmitButton from "../components/Form/SubmitButton";
 
 export default function Submit() {
@@ -11,7 +11,7 @@ export default function Submit() {
         <SubmitButton
           className="w-60"
           onClick={() => {
-            window.location.href = "/";
+            Router.push("/");
           }}
           label={"Return To Home"}
         >
@@ -20,7 +20,7 @@ export default function Submit() {
         <SubmitButton
           className="w-60"
           onClick={() => {
-            window.location.href = "/contact";
+            Router.push("/contact");
           }}
           label={"Return To Contact"}
         >

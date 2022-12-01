@@ -1,6 +1,7 @@
 // pages/contact.tsx
 
 import React from "react";
+import Router from "next/router";
 
 import SimpleForm from "../components/Form/SimpleForm";
 import SubmitButton from "../components/Form/SubmitButton";
@@ -13,9 +14,9 @@ class Contact extends React.Component {
     this.state = {};
   }
 
-  submitForm = () => {
-    window.location.href = "/submit";
-  };
+  submitForm() {
+    Router.push("/submit");
+  }
 
   render() {
     return (
@@ -30,7 +31,7 @@ class Contact extends React.Component {
         <SubmitButton
           className="w-40"
           onClick={() => {
-            window.location.href = "/";
+            Router.push("/");
           }}
           label={"Return To Home"}
         >

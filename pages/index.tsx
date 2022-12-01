@@ -1,5 +1,6 @@
 // pages/index.tsx
 import SubmitButton from "../components/Form/SubmitButton";
+import Router from "next/router";
 
 export default function () {
   return (
@@ -11,7 +12,7 @@ export default function () {
       <SubmitButton
         className="text-slate-200 bg-blue-600 hover:bg-blue-700"
         onClick={() => {
-          window.location.href = "/contact";
+          Router.push("/contact");
         }}
         label={"Contact Us"}
       >

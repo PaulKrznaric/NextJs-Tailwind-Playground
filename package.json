@@ -27,6 +27,7 @@
     "mobx-persist": "^0.4.1",
     "mobx-react": "^7.6.0",
     "mobx-react-form": "^3.2.0",
+    "react-router-dom": "^6.4.4",
     "valid-url": "^1.0.9",
     "validatorjs": "^3.22.1"
   }
