@@ -1,9 +1,19 @@
 //components/Form/SimpleForm.tsx
 import SubmitButton from "./SubmitButton";
+import React from "react";
 
-export default function SimpleForm({ buttonText, onSubmit }) {
+interface FormProps {
+  children?: React.ReactNode;
+  onSubmit: () => void;
+  className?: string;
+  buttonText?: string;
+  formLabel: string;
+  buttonLabel: string;
+}
+
+export default function SimpleForm({ children, ...props }: FormProps) {
   return (
-    <form className="center-div">
+    <form className="center-div" aria-label={props.formLabel}>
       <label className="text-xl">Name</label>
       <input className="border-2 border-black rounded-md p-2 m-2" type="text" />
       <label className="text-xl">Email</label>
@@ -13,7 +23,9 @@ export default function SimpleForm({ buttonText, onSubmit }) {
       />
       <label className="text-xl">Message</label>
       <textarea className="border-2 border-black rounded-md p-2 m-2" />
-      <SubmitButton click={onSubmit}>{buttonText}</SubmitButton>
+      <SubmitButton onClick={props.onSubmit} label={props.buttonLabel}>
+        {props.buttonText}
+      </SubmitButton>
     </form>
   );
 }

@@ -24,12 +24,15 @@ class Contact extends React.Component {
         <SimpleForm
           buttonText={"Submit"}
           onSubmit={this.submitForm}
+          formLabel={"Contact Form"}
+          buttonLabel={"Submit Contact Form"}
         ></SimpleForm>
         <SubmitButton
           className="w-40"
-          click={() => {
+          onClick={() => {
             window.location.href = "/";
           }}
+          label={"Return To Home"}
         >
           Return To Home
         </SubmitButton>

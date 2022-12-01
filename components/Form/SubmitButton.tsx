@@ -1,14 +1,26 @@
 // components/ SubmitButton.tsx;
 
+import React from "react";
+
 import classNames from "classnames";
 //import styles from the index css
 //import styles from the nextjs app
 
-export default function SubmitButton({ click, children, className = "" }) {
-  const buttonClasses = classNames("btn", className);
+interface ButtonProps {
+  children?: React.ReactNode;
+  label: string;
+  onClick: () => void;
+  disabled?: boolean;
+  className?: string;
+}
+
+const SubmitButton: React.FC<ButtonProps> = ({ children, ...props }) => {
+  const buttonClasses = classNames("btn", props.className);
   return (
-    <button onClick={click} className={buttonClasses}>
+    <button onClick={props.onClick} className={buttonClasses}>
       {children}
     </button>
   );
-}
+};
+
+export default SubmitButton;

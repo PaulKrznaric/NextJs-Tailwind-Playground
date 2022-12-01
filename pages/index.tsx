@@ -13,7 +13,7 @@ export default function () {
         onClick={() => {
           window.location.href = "/contact";
         }}
-        size={undefined}
+        label={"Contact Us"}
       >
         Contact Us
       </SubmitButton>
